@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by SK on 6/9/2022
  **/
-public class BranchSums {
+public class  BranchSums {
 
   public static class BinaryTree {
     int value;
