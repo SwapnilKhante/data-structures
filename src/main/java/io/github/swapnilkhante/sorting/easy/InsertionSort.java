@@ -16,7 +16,6 @@ public class InsertionSort {
   // Thus, this sorting algorithm has a low overhead.
   // time worse case and average case - O(n^2) | best case - O(N) (if array is already sorted) ; space O(1)
   public static int[] insertionSort(int[] array) {
-
     for(int i=0; i < array.length; i++) {
       int j = i;
       while(j > 0 && array[j] < array[j -1 ]) {
@@ -24,7 +23,6 @@ public class InsertionSort {
         j--;
       }
     }
-    // Write your code here.
     return array;
   }
 

@@ -1,4 +1,4 @@
-package io.github.swapnilkhante.sorting.easy.hard;
+package io.github.swapnilkhante.sorting.hard;
 
 import java.util.Arrays;
 

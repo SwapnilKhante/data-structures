@@ -46,7 +46,7 @@ public class NthFibonacci {
   }
 
   // using an iterative approach
-  //time - O(n) | space - O(N)
+  //time - O(n) | space - O(1)
   public static int getNthFibIterative(int n) {
 
     int[] fibArray = new int[]{0, 1};
@@ -58,6 +58,36 @@ public class NthFibonacci {
       counter++;
     }
     return n > 1 ? fibArray[1] : fibArray[0];
+  }
+
+  private static int getNthFibUsingHashMap(int n) {
+
+    Map<Integer, Integer> fibMap = new HashMap <>();
+    fibMap.put(1, 0);
+    fibMap.put(2,1);
+    return getNthFib2(fibMap, n);
+  }
+
+  private static int getNthFib2(Map <Integer, Integer> fibMap, int n) {
+    if(fibMap.containsKey(n)) {
+      return fibMap.get(n);
+    } else{
+      fibMap.put(n, getNthFib2(fibMap, n - 1) + getNthFib2(fibMap, n - 2) );
+      return fibMap.get(n);
+    }
+  }
+
+
+  private static int getNthFibUsingArray(int n) {
+    int[] fib = new int[]{0, 1};
+    int counter = 3;
+    while (counter <=n ) {
+      int nexFib = fib[0] + fib[1];
+      fib[0] = fib[1];
+      fib[1] = nexFib;
+      counter++;
+    }
+    return n > 1 ? fib[1] : fib[0];
   }
 }
 

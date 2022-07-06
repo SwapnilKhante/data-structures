@@ -1,7 +1,5 @@
 package io.github.swapnilkhante.binarytree.easy;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * Created by SK on 6/14/2022
  **/
@@ -17,28 +15,17 @@ public class NodeDepth {
     root.right = new BinaryTree(3);
     root.right.left = new BinaryTree(6);
     root.right.right = new BinaryTree(7);
-    int actual = nodeDepths(root);
+    int actual = nodeDepthsHelper(root);
     System.out.println(actual);
   }
 
-  private static int nodeDepths(BinaryTree root) {
-
-    AtomicInteger parentDepth = new AtomicInteger(0);
-    if (root == null) return 0;
-    return nodeDepths(root, parentDepth);
+  private static int nodeDepthsHelper(BinaryTree root) {
+    return nodeDepthsHelper(root, 0);
   }
 
-  private static int nodeDepths(BinaryTree node, AtomicInteger depth) {
-
-//    if (node.left != null && node.right!=null) {
-//      nodeDepths(node.left, depth.);
-//    }
-//    if(node.right!=null) {
-//      depth++;
-//    }
-//    return depth;
-//  }
-
-    return 0;
+  // O(N) time and O(h) space
+  private static int nodeDepthsHelper(BinaryTree node, int depth) {
+    if (node == null) return 0;
+    return depth + nodeDepthsHelper(node.left, depth + 1) + nodeDepthsHelper(node.right, depth + 1);
   }
 }

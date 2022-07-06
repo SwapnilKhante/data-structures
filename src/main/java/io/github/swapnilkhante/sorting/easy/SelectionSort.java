@@ -17,11 +17,9 @@ public class SelectionSort {
    */
   // find the smallest element in each iteration and append it to the beginning of the list (which is a sorted sublist)
   public static int[] selectionSort(int[] array) {
-
     int startIdx = 0;
     while (startIdx < array.length - 1) {
       int smallestIdx = startIdx;
-
       for (int i = startIdx + 1; i < array.length; i++) {
         if (array[smallestIdx] > array[i] ) {
           smallestIdx = i;

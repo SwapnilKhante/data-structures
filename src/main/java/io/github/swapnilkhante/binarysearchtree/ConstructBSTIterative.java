@@ -16,7 +16,7 @@ public class ConstructBSTIterative {
 
 
     // average O(log(N)) time , O(1) space as we are using iterative approach
-    // average O(N) time , O(1) space
+    // worst O(N) time , O(1) space
     public BST insert(int value) {
       BST currentNode = this;
       while (true) {
