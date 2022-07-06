@@ -97,8 +97,6 @@ public class ConstructDoublyLinkedList {
       insertAfter(this.tail, node);
     }
 
-
-
     // time O(1) | space O(1)
     public void insertAfter(Node node, Node nodeToInsert) {
       if (nodeToInsert == this.head && nodeToInsert == this.tail) {
@@ -134,9 +132,5 @@ public class ConstructDoublyLinkedList {
         setTail(node);
       }
     }
-
-
   }
-
-
 }
