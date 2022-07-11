@@ -2,9 +2,11 @@ package io.github.swapnilkhante.arrays.easy;
 
 import java.util.Arrays;
 
+
 /**
  * Created by SK on 6/7/2022
- **/
+ *  Minimum amount of change that you can not create
+ */
 public class NonConstructibleChange {
 
   public static void main(String[] args) {
